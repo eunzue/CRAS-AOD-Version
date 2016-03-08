@@ -17,7 +17,7 @@ $(document).ready(function() {
                 this.bindPopup("<strong>" + place.name + "</strong>. "+ place.students +" alumnos<br/>"+root.name);
                 this.openPopup();
                 selectPlace(place, root.name);
-                $.getJSON("/show_municipality/"+place.id, {year: year}, function(resp){
+                $.getJSON("/apps/cras/show_municipality/"+place.id, {year: year}, function(resp){
                     drawChart(resp);
                 });
             });
@@ -51,7 +51,7 @@ $(document).ready(function() {
     var selectedPlace;
 
     var load_cras = function() {
-        $.getJSON('/cras', {year: year}, function(cras) {
+        $.getJSON('/apps/cras/cras', {year: year}, function(cras) {
           map.removeLayer(markers);
           markers = L.layerGroup().addTo(map);;
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
           });
 
         if(!selectedPlace){
-            $.getJSON('/statistics', {year: year}, function(stats){
+            $.getJSON('/apps/cras/statistics', {year: year}, function(stats){
                 $("#total_places").text(stats.total_places);
                 $("#total_students").text(stats.total_students);
                 $("#total_centers").text(stats.total_centers);
@@ -104,7 +104,7 @@ $(document).ready(function() {
     setYear(2013);
 
 
-    $.getJSON("/students_by_year", function(resp){
+    $.getJSON("/apps/cras/students_by_year", function(resp){
         drawChart(resp);
     });
 

@@ -1,12 +1,9 @@
 import requests
 import time
 import json
-import MySQLdb
+import config as configuracion
 
-db = MySQLdb.connect(host='localhost',
-                    user='root',
-                    passwd='',
-                    db='Datos')
+db = configuracion.conexion()
 
 
 
