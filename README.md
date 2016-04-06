@@ -21,7 +21,7 @@ Recomendamos aislar el entorno de desarrollo Python con `virtualenv`:
 ```
 sudo pip install virtualenv
 cd /path_de_app
-virtualenv campusOpenData
+virtualenv crasaragon
 ```
 
 En caso de duda consultar la documentación oficial de [pip](https://pip.readthedocs.org/en/latest/) y de [Virtualenv](https://virtualenv.readthedocs.org/en/latest/).
