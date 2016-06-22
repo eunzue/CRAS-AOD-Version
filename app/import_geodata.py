@@ -8,7 +8,7 @@ db = configuracion.conexion()
 
 
 
-url_centros = 'http://idearagon.aragon.es/GeoserverWFS?service=WFS&request=getFeature&typeName=IDEAragon:CARTO.V206_CENTROS_EDUCATIVOS&srsName=epsg:4326&outputFormat=json'
+url_centros = 	'
 
 # params = {
 #         'api_key': my_key,
@@ -26,7 +26,7 @@ def fetch_centros(url):
     f.write(r.text.encode('utf-8'))
     f.close()
 
-def load_centros():
+def load_centros():	
     cursor = db.cursor()
     f = open('centros.json')
     j = json.loads(f.read())

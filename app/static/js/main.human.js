@@ -47,7 +47,7 @@ $(document).ready(function() {
         $('#back_to_aragon').show();
     }
 
-    var year = 2013;
+    var year = 2014;
     var selectedPlace;
 
     var load_cras = function() {
@@ -100,8 +100,8 @@ $(document).ready(function() {
     });
 
     $(".dragger").append($('<div id="yearLabel"></div>'));
-    $('#yearSelect').simpleSlider('setValue', 2013);
-    setYear(2013);
+    $('#yearSelect').simpleSlider('setValue', 2014);
+    setYear(2014);
 
 
     $.getJSON("/apps/cras/students_by_year", function(resp){
